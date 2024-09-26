@@ -1,0 +1,29 @@
+# Question 1
+Les RC et les RS permettent de reproduire des pods identiques, en grand nombre, un peu à la manière d'une image docker, et de gérer toutes les instances séparément ou simultanément.
+
+# Question 2
+Le ReplicaSet permet des options plus précises au niveau du sélecteur, c'est donc plus pratique car on peut totalement éviter les conflits en cas de versions différentes, d'environnements différents etc.
+
+# Question 3
+Le pod va se déployer puis être terminated par le RC, puisque sa version est bonne mais pas son environnement 
+
+# Question 4
+En donnant les versions sous forme de liste, pour que plusieurs soient prises en charge 
+
+  selector:
+    matchExpressions:
+      - key: version
+        operator: In
+        values: ["2.0", "3.0"]
+
+# Question 5
+En utilisant l'opérateur NotIn vis-à-vis de l'environnement à exclure
+
+  selector:
+    matchExpressions:
+      - key: env
+        operator: NotIn
+        values: dev
+
+# Question 6
+Le pod va se lancer et tourner comme prévu, le ReplicaSet ne va pas estimer qu'il doit l'arrêter, à l'inverse du ReplicationController

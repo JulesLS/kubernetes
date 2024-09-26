@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: monapp-rc
+  labels:
+    app: monapp 
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: monapp
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
