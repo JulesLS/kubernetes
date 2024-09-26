@@ -1,0 +1,11 @@
+# TP2
+fruits:
+  - pomme
+  - banane
+  - orange
+
+légumes:
+  - poireau
+  - cèleri (pas bon)
+  - carotte
+  - choux

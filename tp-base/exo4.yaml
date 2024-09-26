@@ -1,0 +1,27 @@
+Fruits:
+  - Pomme:
+      Calories: 95g
+      Lipides: 0.3g
+      Glucides: 25g
+  -   Banane:
+      Calories: 105g
+      Lipides: 0.4g
+      Glucides: 27g
+  - Orange:
+      Calories: 45g
+      Lipides: 0.1g
+      Glucides: 11g
+
+Légumes:
+  - Carotte:
+      Calories: 25g
+      Lipides: 0.11g
+      Glucides: 6g
+  -   Tomate:
+      Calories: 22g
+      Lipides: 0.2g
+      Glucides: 4.8g
+  - Concombre:
+      Calories: 8g
+      Lipides: 0.1g
+      Glucides: 1.9g

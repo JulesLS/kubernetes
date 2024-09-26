@@ -1,0 +1,31 @@
+# Porsche
+Porsche:
+  type:
+    modèle: cayenne
+    carburant: diesel
+    année: 2016
+    couleur: bleue
+
+  immatriculation: IT-007-IT
+  portes: 3
+  transmission: manuelle
+  papiers:
+    - carte grise
+    - controle technique
+    - test pollution
+
+
+# Tesla
+Tesla:
+  type:
+    modèle: 3
+    carburant: électrique
+    année: 2018
+    couleur: grise
+
+  immatriculation: UN-777-IX
+  portes: 5
+  transmission: automatique
+  papiers:
+    - carte grise
+    - controle technique

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: replicaset-pod
+  labels:
+    type: replicaset
+
+spec:
+  template:
+  # Ici, on doit mettre le metadata et le spec du pod à répliquer
+    metadata:
+      labels:
+        type: testpod
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+  # Nombre de répliques
+  replicas: 3
+  # Des conditions pour bien sélectionner les bons pods. Ici, le label type doit valoir testpod
+  selector:
+      type: testpod

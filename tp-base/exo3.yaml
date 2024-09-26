@@ -1,0 +1,16 @@
+# TP3
+produits:
+  - pomme:
+    type: fruit
+  - banane:
+    type: fruit
+  - orange:
+    type: fruit
+  - poireau:
+    type: légume
+  - cèleri:
+    type: légume
+  - carotte:
+    type: légume
+  - choux:
+    type: légume
