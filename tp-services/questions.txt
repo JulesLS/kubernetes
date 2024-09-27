@@ -1,0 +1,11 @@
+# Question 1
+Le ClusterIP permet une communication avec les machines en permanence. Même si elles sont détruites et qu'elles changent d'adresse IP, puisqu'on contacte le ClusterIP, on arrivera à communiquer avec les machines. C'est un peu comme un routeur qui connaît les adresses des machines et redirige la requête au bon endroit pour nous.
+
+# Question 2
+Les NodePorts permettent d'accéder au service de l'extérieur. Ils sont donc utiles dès lors que les services doivent communiquer avec l'extérieur.
+
+# Question 3
+Avec les labels qu'on indique dans le YAML
+
+# Question 4
+Si on n'indique pas de labels du tout, les services s'activeront pour tout l'environnement de travail, ce qui n'est pas le résultat voulu. Par exemple on ne veut pas forcément que les pods dans l'environnement prod se mettent à jour ou soient accessibles de l'extérieur etc.
