@@ -1,0 +1,23 @@
+# Question 1
+
+Les 2 stratégies disponibles sont les Rolling Updates, et le Recreate. Le Recreate détruit tous les pods et reconstruit les pods nécessaires. La Rolling Update va supprimer quelques pods tout en gardant d'autres disponibles et en créant d'autres pour compenser (généralement, autant que de pods en cours d'arrêt). Cela va permettre de garder une disponibilité totale sur les pods et évite un arrêt total du processus.
+
+# Question 2
+
+Réduire le nombre de replicas réduit la demande totale en ressources. En revanche, augmenter leur nombre permet une plus haute disponibilité : si 1 replica sur 100 échoue, il en reste encore 99. En revanche si c'est 1 sur 4, c'est plus problématique.
+
+# Question 3
+
+La différence tient surtout au fait que le deployment permet de rollout des mises à jour, et donc de mettre à jour les pods sans perte de disponibilité.
+
+# Question 4
+
+Il faut bien les configurer, sinon l'HPA peut finir par demander beaucoup trop, ou pas assez de ressources, et donc ne pas fonctionner, ou ralentir les machines.
+
+# Question 5
+
+S'il fallait scale à la main, ce serait une perte de temps énorme.
+
+# Question 6
+
+Si la mise à jour échoue, les pods restent dans la version initiale et Kubernetes s'assurent qu'ils restent disponibles. Pour diagnostiquer le problème, on peut analyser le message d'erreur, qui donne souvent toutes les réponses. On peut ajouter le flag -v ou --v pour gérer la verbosité de ce message.
